@@ -1,4 +1,4 @@
-#include <string.h>
+#include "libft.h"
 
 char *ft_strncpy(char *restrict dest, const char *restrict src, size_t n)
 {

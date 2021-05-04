@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "libft.h"
 
 void ft_putnbr(int i)
 {
@@ -24,10 +24,4 @@ void ft_putnbr(int i)
             ft_putnbr(i % 10);
         }
     }
-}
-
-int main(void)
-{
-    ft_putnbr(-4002035);
-    return (0);
 }
