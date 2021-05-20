@@ -1,9 +1,20 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/05/20 12:22:55 by smagdela          #+#    #+#             */
+/*   Updated: 2021/05/20 12:47:25 by smagdela         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_bzero(void *s, size_t n)
+#include "libft.h"
+void    ft_bzero(void *s, size_t n)
 {
-    size_t i;
-    char *tmp_s;
+    size_t  i;
+    char    *tmp_s;
 
     tmp_s = s;
     i = 0;
