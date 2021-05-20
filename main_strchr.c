@@ -6,17 +6,17 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 12:24:50 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/20 12:25:04 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/05/20 15:02:08 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-    char *str = "Hello Night City!!!";
-    char c;
+    char	*str = "Hello Night City!!!";
+    char	c;
 
     if(argc == 2)
     {

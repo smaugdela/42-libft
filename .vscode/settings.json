@@ -4,5 +4,7 @@
         "libft.h": "c",
         "unistd.h": "c",
         "stdio.h": "c"
-    }
+    },
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": false
 }

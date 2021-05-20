@@ -1,21 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_memset.c                                      :+:      :+:    :+:   */
+/*   main_memove.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 12:24:43 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/20 15:01:43 by smagdela         ###   ########.fr       */
+/*   Created: 2021/05/20 14:41:37 by smagdela          #+#    #+#             */
+/*   Updated: 2021/05/20 14:50:18 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	main(void)
+void	main(void)
 {
-    char	str[100];
-    ft_memset(str, 666, 5);
-    return (0);
+	char	*str;
+
+	str = "Hello Night City!!!";
+	printf("Ma fonction : %s", ft_memmove(str, str + 5, 19));
+	printf("Fonction officielle : %s", memmove(str, str + 5, 19));
+	return (0);
 }
