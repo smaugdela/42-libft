@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_memmove.c                                     :+:      :+:    :+:   */
+/*   main_memchr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 14:41:37 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/20 15:16:13 by smagdela         ###   ########.fr       */
+/*   Created: 2021/05/20 15:09:57 by smagdela          #+#    #+#             */
+/*   Updated: 2021/05/20 15:16:04 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	main(void)
 	char	*str;
 
 	str = "Hello Night City!!!";
-	printf("Ma fonction : %s \n", ft_memmove(str, str + 5, 19));
-	printf("Fonction officielle : %s \n", memmove(str, str + 5, 19));
+	printf("Ma fonction : %s \n", ft_memchr(str, 'i', ft_strlen(str)));
+	printf("La fonction officielle : %s \n", memchr(str, 'i', ft_strlen(str)));
 	return (0);
 }
