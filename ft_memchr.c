@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 12:23:26 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/21 12:29:29 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/05/21 18:02:15 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@ void	*ft_memchr(const void *src, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*tmp_src;
+	unsigned char	tmp_c;
 
+	tmp_c = (unsigned char)c;
 	tmp_src = (unsigned char *)src;
 	i = 0;
 	while (i < n)
 	{
-		if (tmp_src[i] == c)
+		if (tmp_src[i] == tmp_c)
 			return (tmp_src + i);
 		++i;
 	}

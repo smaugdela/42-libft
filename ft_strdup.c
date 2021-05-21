@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 12:24:07 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/20 14:56:51 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/05/21 15:47:36 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ char	*ft_strdup(const char *str)
 		*(dest + i) = *(str + i);
 		++i;
 	}
+	*(dest + i) = '\0';
 	return (dest);
 }
