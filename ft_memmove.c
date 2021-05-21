@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 12:23:44 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/20 14:41:17 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/05/21 12:38:55 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*tmp_dest;
-	char	*tmp_src;
-	size_t	i;
+	char		*tmp_dest;
+	const char	*tmp_src;
+	size_t		i;
 
 	tmp_src = (const char *)src;
 	tmp_dest = (char *)dest;

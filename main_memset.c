@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 12:24:43 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/20 15:01:43 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/05/21 12:15:36 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 int	main(void)
 {
-    char	str[100];
-    ft_memset(str, 666, 5);
-    return (0);
+	char	str[100];
+
+	ft_memset(str, 666, 5);
+	return (0);
 }

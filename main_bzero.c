@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 12:24:32 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/20 15:00:57 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/05/21 12:12:53 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 
 int	main(void)
 {
-    int		i;
-    char	str[19] = "Hello Night City!!!";
+	int		i;
+	char	str[19] = "Hello Night City!!!";
 
-    i = 0;
-    while (i < 20)
-    {
-        printf("%c \n", str[i++]);
-    }
-    i = 0;
-    ft_bzero(str, 8);
-    while (i < 20)
-    {
-        printf("%c \n", str[i++]);
-    }
-    return (0);
+	i = 0;
+	while (i < 20)
+	{
+		printf("%c \n", str[i++]);
+	}
+	i = 0;
+	ft_bzero(str, 8);
+	while (i < 20)
+	{
+		printf("%c \n", str[i++]);
+	}
+	return (0);
 }

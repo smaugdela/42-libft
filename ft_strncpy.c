@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 12:24:22 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/20 14:59:27 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/05/21 12:38:24 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strncpy(char *restrict dest, const char *restrict src, size_t n)
 		dest[i] = src[i];
 		++i;
 	}
-	while(i < n)
+	while (i < n)
 	{
 		dest[i] = '\0';
 		++i;
