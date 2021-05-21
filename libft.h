@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 12:24:28 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/20 15:00:32 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/05/21 18:28:35 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,9 @@ char	*ft_strcat(char *dest, const char *src);
 char	*ft_strncat(char *restrict dest, const char *restrict src, size_t n);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
 
 #endif
