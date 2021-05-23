@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/20 12:23:58 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/23 14:41:48 by smagdela         ###   ########.fr       */
+/*   Created: 2021/05/23 14:22:19 by smagdela          #+#    #+#             */
+/*   Updated: 2021/05/23 14:53:04 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int	ft_tolower(int c)
 {
-	int	i;
-	int	len;
-
-	i = 0;
-	len = ft_strlen(s);
-	while (i <= len)
-	{
-		if (*(s + i) == c)
-			return ((char *)(s + i));
-		++i;
-	}
-	return (NULL);
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	return (c);
 }
