@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 12:24:28 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/23 14:44:18 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/05/23 15:16:31 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ size_t	ft_strlen (const char *str);
 char	*ft_strdup(const char *str);
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strncat(char *dest, const char *src, size_t n);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
