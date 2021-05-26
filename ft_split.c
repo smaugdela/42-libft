@@ -6,24 +6,26 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 17:37:32 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/26 18:26:15 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/05/26 19:03:26 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_countwords(char *str, char sep)
+static int	ft_countwords(char *str, char sep)
 {
 	int	count;
+	int	i;
 
-	if (*str == '\0')
+	i = 0;
+	if (str[i] == '\0')
 		return (0);
 	count = 1;
-	while (*str)
+	while (str[i])
 	{
-		if (*str == sep)
+		if (str[i] == sep && str[i + 1] != sep)
 			++count;
-		++str;
+		++i;
 	}
 	return (count);
 }
@@ -40,10 +42,10 @@ static int	ft_wordlen(const char *str, char sep)
 		++len;
 		++i;
 	}
-	return (len);
+	return (++len);
 }
 
-static char	*ft_error(char **tab, int nb)
+static char	**ft_error(char **tab, int nb)
 {
 	while (nb >= 0)
 	{
@@ -54,6 +56,14 @@ static char	*ft_error(char **tab, int nb)
 	return (NULL);
 }
 
+static char	*ft_offset_str(char *str, int add, char pass)
+{
+	str += add;
+	while (*str == pass)
+		++str;
+	return (str);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	*str;
@@ -62,22 +72,22 @@ char	**ft_split(char const *s, char c)
 	int		words;
 	int		wd_len;
 
-	str = ft_strtrim(s, c);
+	str = ft_strtrim(s, &c);
 	if (!str || s == NULL)
 		return (NULL);
 	words = ft_countwords(str, c);
 	tab = (char **)malloc((words + 1) * sizeof(char *));
 	if (tab == NULL)
 		return (NULL);
-	tab[words] == NULL;
-	i = 0;
-	while (tab[i] != NULL)
+	tab[words] = NULL;
+	i = -1;
+	while (++i < words)
 	{
 		wd_len = ft_wordlen(str, c);
-		tab[i] = (char *)malloc((wd_len + 1) * sizeof(char));
+		tab[i] = (char *)malloc((wd_len) * sizeof(char));
 		if (tab[i] == NULL || ft_strlcpy(tab[i], str, wd_len) != ft_strlen(str))
 			return (ft_error(tab, i));
-		++i;
+		str = ft_offset_str(str, wd_len, c);
 	}
 	return (tab);
 }
