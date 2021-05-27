@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/25 11:08:52 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/27 15:34:10 by smagdela         ###   ########.fr       */
+/*   Created: 2021/05/27 15:55:21 by smagdela          #+#    #+#             */
+/*   Updated: 2021/05/27 16:15:59 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-	char	*subs;
-	size_t	i;
+	t_list	*tmp_lst;
 
-	subs = (char *)malloc((len + 1) * sizeof(char));
-	if (!subs || s == NULL)
-		return (NULL);
-	i = 0;
-	while (i < len && (start + i) < ft_strlen(s))
+	if (alst != NULL && *alst != NULL)
 	{
-		subs[i] = s[start + i];
-		++i;
+		tmp_lst = ft_lstlast(*alst);
+		tmp_lst -> next = new;
 	}
-	subs[i] = '\0';
-	return (subs);
+	else
+		*alst = new;
 }

@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/25 11:08:52 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/27 15:34:10 by smagdela         ###   ########.fr       */
+/*   Created: 2021/05/27 16:20:39 by smagdela          #+#    #+#             */
+/*   Updated: 2021/05/27 16:51:07 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	char	*subs;
-	size_t	i;
+	t_list	*tmp_lst;
 
-	subs = (char *)malloc((len + 1) * sizeof(char));
-	if (!subs || s == NULL)
-		return (NULL);
-	i = 0;
-	while (i < len && (start + i) < ft_strlen(s))
+	if (lst != NULL && del != NULL)
 	{
-		subs[i] = s[start + i];
-		++i;
+		while (*lst != NULL)
+		{
+			tmp_lst = (*lst)->next;
+			ft_lstdelone(*lst, del);
+			*lst = tmp_lst;
+		}
+		lst = NULL;
 	}
-	subs[i] = '\0';
-	return (subs);
 }
