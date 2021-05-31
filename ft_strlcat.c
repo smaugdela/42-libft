@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 12:24:10 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/21 15:45:20 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/05/31 12:15:32 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	len;
 
 	if (size == 0)
-		return (0);
+		return (ft_strlen(src));
 	len = ft_strlen(dest);
 	if (size < len)
 		len = size;
