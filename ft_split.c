@@ -6,7 +6,7 @@
 /*   By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 17:37:32 by smagdela          #+#    #+#             */
-/*   Updated: 2021/05/31 17:01:28 by smagdela         ###   ########.fr       */
+/*   Updated: 2021/06/02 09:52:17 by smagdela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ static char	**ft_error(char **tab, int nb)
 static char	*ft_offset_str(char *str, int add, char pass)
 {
 	str += add;
-	while (*str == pass)
+	while (*str == pass && pass != 0)
 		++str;
 	return (str);
 }
