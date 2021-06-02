@@ -6,7 +6,7 @@
 #    By: smagdela <smagdela@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/21 11:59:39 by smagdela          #+#    #+#              #
-#    Updated: 2021/06/02 09:55:20 by smagdela         ###   ########.fr        #
+#    Updated: 2021/06/02 10:25:59 by smagdela         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,8 +42,8 @@ all: ${NAME}
 ${OBJD}%.o:    ${SRCD}%.c
 	${CC} $@ ${CFLAGS} $<
 
-bonus:	${BONUSO} ${NAME}
-	${LINKER} ${NAME} ${LDFLAGS} ${BONUSO}
+bonus:	${OBJS} ${BONUSO}
+	${LINKER} ${LDFLAGS} ${NAME} ${OBJS} ${BONUSO}
 
 clean:
 	${RM} ${OBJS} ${BONUSO}
